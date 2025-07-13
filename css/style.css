@@ -1,0 +1,593 @@
+body{
+    overflow-x: hidden;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+.header{
+    margin-top: -5px;
+    background: center/cover no-repeat url('../img/bg-header.png');
+    object-fit: contain;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Уменьшаем отступы */
+    width: 100%;
+    box-sizing: border-box;
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+}
+.logo{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.burger-icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.header_list{
+    display: flex;
+    gap: 30px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.header_list_item a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.4;
+            position: relative;
+            display: block;
+            transition: color 0.3s;
+}
+
+/* Анимация подчеркивания */
+        .header_list_item a::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #52DF7A;
+            transition: width 0.3s ease;
+        }
+
+        .header_list_item a:hover::after {
+            width: 100%;
+        }
+
+        .header_list_item a:hover {
+            color: #e0e0ff;
+        }
+.btn{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: #FFF;
+    background-color: #52DF7A;
+    font-size: 16px;
+    padding: 13px 35px;
+    border-radius: 20px;
+}
+.header_tel{
+    display: flex;
+    margin-top: 40px;
+    gap: 5px;
+}
+
+
+        /* Стили только для бургер-меню */
+    .burger-icon {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1001;
+        margin-left: 15px;
+    }
+
+    .burger-icon span {
+        height: 3px;
+        width: 100%;
+        background-color: #fff;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    /* Мобильное меню */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #2A2D40;
+        z-index: 1000;
+        padding: 100px 30px 30px;
+        transition: left 0.4s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+
+    .mobile-menu.active {
+        left: 0;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 30px;
+        left: 25px;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        z-index: 1002;
+    }
+
+    .mobile-menu-items {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .mobile-menu-item a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px 0;
+        display: block;
+        position: relative;
+        line-height: 1.4;
+    }
+
+    /* Анимация подчеркивания для мобильного меню */
+    .mobile-menu-item a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #fff;
+        transition: width 0.3s ease;
+    }
+
+    .mobile-menu-item a:hover::after {
+        width: 100%;
+    }
+
+
+
+.header_title{
+    margin-top: 200px;
+}
+
+h1{
+    color: #FDFFFC;
+    font-family: Montserrat;
+    font-size: 54px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 64.8px;
+}
+
+h2{
+    color: rgba(253, 255, 252, 0.80);
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 40px;
+}
+
+.header_title_btn{
+    display: flex;
+    align-items: center;
+    padding: 3px 50px 3px 6px;
+    gap: 10px;
+    border-radius: 40px;
+    max-width: 210px;
+}
+
+.header_title_btn img{
+    background-color: #63EA8A;
+    border-radius: 30px;
+}
+
+.main{
+    margin-top: -5px;
+}
+
+/* about us */
+
+.about_us{
+    background-color: #142235;
+    width: 100%;
+    height: 100%;
+}
+.about_us__bg{
+    background: no-repeat  url('../img/bg-about_us.png');
+    width: 100%;
+    background-size: cover;
+}
+.about_us__inner{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.title{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.about_us__text{
+    max-width: 670px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 23px;
+}
+
+.about_us__img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* services */
+
+.services{
+    background: no-repeat url('../img/services-bg.png');
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    margin-top: -5px;
+}
+.services__list{
+    padding-top: 90px;
+    padding-bottom: 60px;
+}
+.services__list_top{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.card__title{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-left: 20px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27.8px; /* 115.833% */
+    letter-spacing: 0.42px;
+}
+.card__list {
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(22, 22, 22, 0.25);
+    padding: 30px 30px;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px; /* 120% */
+    letter-spacing: 0.42px;
+    max-width: 382px;
+    width: 100%;
+}
+
+.card__list__item{
+    position: relative;
+    display: flex;
+    gap: 2px;
+    max-width: 340px;
+}
+.list_top__item:first-of-type{
+    padding-bottom: 40px;
+}
+
+.card__list__item::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: -10px;
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    display: block;
+    border-radius: 50%;
+}
+
+.card__list__item:not(:first-of-type){
+    padding-top: 20px;
+}
+.card__list__item:not(:first-of-type)::before{
+    margin-top: 20px;
+}
+
+.list_top__item:not(:first-of-type) .card__list__item:not(:first-of-type){
+    padding-top: 28px;
+}
+.list_top__item:not(:first-of-type) .card__list__item:not(:first-of-type)::before{
+    margin-top: 28px;
+}
+.services__list_bottom{
+    margin-top: 50px;
+}
+.list_bottom__item{
+    max-width: 840px;
+    margin: 0 auto;
+    width: 100%;
+
+}
+.list_bottom__item .card__title{
+    margin: 0 auto 40px auto;
+    max-width: 214px;
+}
+.list_bottom__item .card__list{
+    max-width: 874px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list_bottom__item .card__list__item{
+    max-width: 420px;
+    width: 100%;
+}
+
+/* contacts */
+
+.contacts{
+    background-color: #132032;
+}
+.contacts__inner{
+    padding: 100px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts__text{
+    margin-top: 40px;
+    color: rgba(253, 255, 252, 0.80);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    max-width: 650px;
+}
+
+.contacts__form{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contacts__tel{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.contacts__tel_rec{
+    width: 2px;
+    height: 60px;
+    background-color: #fff;
+}
+
+input{
+    background-color: white;
+    border: none;
+    color: rgba(1, 22, 39, 0.70);
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 30px;
+    padding: 16px 25px;
+    transition-duration: 0.5s;
+    outline: none;
+}
+input:focus{
+    border: 2px solid #63EA8A;
+    outline: none;
+}
+.contacts__btn{
+    display: flex;
+    align-items: center;
+    padding: 3px 100px 3px 6px;
+    gap: 50px;
+    border-radius: 40px;
+}
+.contacts__btn img{
+    background-color: #63EA8A;
+    border-radius: 30px;
+}
+
+.tel__small_text{
+    color: #FDFFFC;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+}
+.tel__main__text{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 42px;
+}
+
+/* media */
+    @media (max-width: 1200px) {
+        .header_list_item a{
+            font-size: 12px;
+        }
+        .contacts__inner{
+            flex-direction: column;
+            align-items: flex-start; /* Добавлено */
+        }
+        .contacts__tel{
+            margin-top: 40px;
+        }
+    }
+
+    @media (max-width: 1166px) {
+        
+    }
+
+    @media (max-width: 1100px) {
+        .about_us__inner{
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 1060px) {
+        .list_top__item:not(:first-of-type){
+            padding-bottom: 94px;
+        }
+        .card__list{      
+            max-width: 250px;
+        }
+        .services__list_bottom{
+            margin-top: 0;
+        }
+        .list_bottom__item {
+        max-width: 657px;
+        }
+        .list_bottom__item .card__list {
+        max-width: 597px;
+        }
+        .services__list_top{
+            gap: 13px;
+        }
+    }
+
+
+    @media (max-width: 992px) {
+        .header_list {
+            display: none;
+        }
+        
+        .burger-icon {
+            display: flex;
+        }
+    }
+    @media (max-width: 880px) {
+        .contacts__form {
+            display: block;
+        }
+        .contacts__btn{
+            margin-top: 30px;
+            max-width: 252px;
+            padding: 3px 0px 3px 6px;
+        }
+        .contacts__form{
+            gap: 0px;
+        }
+    }
+
+    @media (max-width: 720px) {
+    .card__title {
+        font-size: 18px;
+    }
+    .title {
+        font-size: 20px;
+    }
+    .about_us__text {
+        font-size: 12px;
+    }
+    .services__list_top {
+        gap: 13px;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .list_bottom__item {
+        max-width: 312px;
+    }
+    .list_bottom__item .card__list {
+        max-width: 250px;
+    }
+    .contacts__inner {
+        flex-direction: column;
+        align-items: flex-start; /* Добавлено */
+    }
+    .contacts__form {
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        align-items: start;
+    }
+    .contacts__tel {
+        align-self: flex-start; /* Добавлено */
+        margin-top: 40px; /* Добавлено */
+    }
+    input{
+        padding: 16px 60px 16px 25px
+    }
+    .contacts__btn{
+        display: flex;
+        align-items: center;
+        padding: 3px 100px 3px 6px;
+        gap: 50px;
+        border-radius: 40px;
+    }
+    }
+
+    @media (max-width: 576px) {
+        .mobile-menu {
+            width: 85%;
+            padding: 90px 20px 20px;
+        }
+    }
+    @media (max-width: 450px) {
+        h1{
+            font-size: 40px;
+        }
+        h2{
+            font-size: 16px;
+        }
+    }
